@@ -1,0 +1,23 @@
+.container
+
+  -if @question.is_correct?(@submission)
+    .alert.alert-success
+      %strong Well done!
+      Your answer is correct.
+
+  -else
+    .alert.alert-danger
+      %strong Uh-oh,
+      wrong answer...
+
+  .well
+
+    %strong Question
+    %p= @question.question
+
+    %strong Your Answer
+    %p= @submission
+
+    = link_to "Try again", question_path(@question), class: 'btn btn-default'
+
+  = link_to "Back to list", root_path

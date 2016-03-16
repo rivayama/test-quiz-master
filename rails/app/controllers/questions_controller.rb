@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_filter :find_question, only: [:show, :edit, :update]
+  before_filter :find_question, only: [:show, :edit, :update, :answer]
 
   def index
     @questions = Question.all
@@ -27,7 +27,7 @@ class QuestionsController < ApplicationController
   end
 
   def answer
-    # TODO
+    @submission = params[:answer][:answer]
   end
 
   private
