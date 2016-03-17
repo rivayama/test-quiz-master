@@ -31,6 +31,10 @@ gem 'bootstrap-sass', '~> 3.3.4'
 gem 'haml-rails'
 
 gem 'numbers_and_words'
+gem 'redcarpet'
+gem 'rails-bootstrap-markdown'
+gem 'font-awesome-rails'
+gem 'jquery-turbolinks'
 
 group :development, :test do
   gem 'rspec-rails'

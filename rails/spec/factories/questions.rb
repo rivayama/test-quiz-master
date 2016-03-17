@@ -13,4 +13,12 @@ FactoryGirl.define do
     question 'Edited question'
     answer 'Edited answer'
   end
+
+  factory :markdown_question, class: Question do
+    question <<EOS
+# Markdown question
+This is the second line
+EOS
+    answer 'The answer of markdown question'
+  end
 end

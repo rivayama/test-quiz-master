@@ -12,12 +12,14 @@
 
   .well
 
-    %strong Question
-    %p= @question.question
+    %dl.dl-horizontal
+      %dt Question
+      %dd= markdown(@question.question)
 
-    %strong Your Answer
-    %p= @submission
+      %dt Your Answer
+      %dd= @submission
 
-    = link_to "Try again", question_path(@question), class: 'btn btn-default'
+    .text-center
+      = link_to "Try again", question_path(@question), class: 'btn btn-default'
 
   = link_to "Back to list", root_path
